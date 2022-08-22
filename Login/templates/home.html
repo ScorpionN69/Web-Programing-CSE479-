@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<form target="/" method="post" align="center">
+  <P> User Name:</p>
+    <input name="name"/>
+  <br/><br/>
+
+    {% if usr==False %}
+    <p style="color:red;">**atleast 8 charecters need</p>
+    {% endif %}
+
+  <p>Password:</p>
+    <input name="Password"/>
+  <br/><br/>
+
+   <p>Confirm Password:</p>
+    <input name="Confirm Password"/>
+  <br/><br/>
+
+    {% if passs==False %}
+    <p style="color:red;">**password and confirm password does not match</p>
+    {% endif %}
+
+   <p>email:</p>
+    <input name="email"/>
+  <br/><br/>
+
+    {% if mail==False %}
+    <p style="color:red;">**enter valid email</p>
+    {% endif %}
+
+  <button type="submit">Sign Up</button>
+</form>
+</body>
+</html>
