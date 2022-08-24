@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+</head>
+<style>
+    table, tr,td{
+    border: 1px solid black;
+    border-collapse: collapse;}
+    td{
+    padding:5px;}
+</style>
+<body>
+<table target="/show">
+    <tr>
+        <td>Student Id</td>
+        <td>Student Name</td>
+        <td>Age</td>
+        <td>Phone</td>
+        <td>Address</td>
+    </tr>
+    {% for x in stu %}
+    <tr>
+        <td>{{x['id']}}</td>
+        <td>{{x['name']}}</td>
+        <td>{{x['age']}}</td>
+        <td>{{x['phone']}}</td>
+        <td>{{x['address']}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
