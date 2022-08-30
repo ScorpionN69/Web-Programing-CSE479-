@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<form action="/login" method="post" align="center">
+  <P> User Name:</p>
+    <input name="name"/>
+  <br/><br/>
+
+  <p>Password:</p>
+    <input name="Password"/>
+  <br/><br/>
+
+    {% if f==False %}
+    <p style="color:red;">**username or password not match</p>
+    {% endif %}
+
+  <button type="submit">Sign In</button>
+</form>
+</body>
+</html>
