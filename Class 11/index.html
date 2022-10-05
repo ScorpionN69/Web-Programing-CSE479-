@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check</title>
+</head>
+<body>
+<form action="/" method="post">
+        <input type="text" name="name" placeholder="Your Name"><br>
+        <input type="checkbox" id="a" name="value1" value="html">
+        <label for="a">HTML</label><br>
+        <input type="checkbox" id="c" name="value3" value="js">
+        <label for="c">JS</label><br>
+        <input type="checkbox" id="b" name="value2" value="css">
+        <label for="b">CSS</label><br><br>
+        <input type="submit" value="Submit">
+</form>
+
+<br>
+<button onclick="myFunction()">Toggle</button>
+<p id="toggle">Hello1</p>
+
+<br><br>
+
+<input id="num" type="number" placeholder="Enter Number"><br>
+<button onclick="loop()">Print</button>
+<p id="loop"></p>
+<script>
+function myFunction() {
+  var x = document.getElementById("toggle");
+  if (x.innerHTML === "Hello1") {
+    x.innerHTML = "Hello2";
+  }
+  else {
+    x.innerHTML = "Hello1";
+  }
+}
+
+function loop() {
+    var x = document.getElementById("num").value;
+    let text = "";
+    for (let i = 1; i <= x; i++) {
+    text += i + "<br>";
+    document.getElementById("loop").innerHTML = text;
+}
+</script>
+
+</body>
+</html>

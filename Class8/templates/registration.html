@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+</head>
+<body>
+<form action="/registration" method="post">
+    Userame:<br> <input type="text" name="name" ><br>
+    {% if unameMsg == 1 %}
+        <h5>Username must contain at least 8 character</h5><br>
+    {% endif %}
+    Password:<br> <input type="password" name="pass1"><br>
+    Confirm Password:<br> <input type="password" name="pass2"><br>
+    {% if passMsg == 1 %}
+        <h5>Password Didn't Match</h5><br>
+    {% endif %}
+    email:<br> <input type="email" name="email"><br><br>
+    <input type="submit" value="Register">
+</form>
+</body>
+</html>

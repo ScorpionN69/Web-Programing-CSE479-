@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+</head>
+<body>
+<form action="/registration" method="post">
+    Userame:<br> <input type="text" name="name" value="{{uname}}"><br>
+    {% if unameMsg %}
+        <h5>Username must contain at least 8 character</h5><br>
+    {% endif %}
+    Password:<br> <input type="password" name="pass1" value="{{pass1}}"><br>
+    Confirm Password:<br> <input type="password" name="pass2" value="{{pass2}}"><br>
+    {% if passMsg %}
+        <h5>Password Didn't Match</h5><br>
+    {% endif %}
+    email:<br> <input type="text" name="email" value="{{email}}"><br><br>
+    {% if emailMsg %}
+        <h5>Please use a valid email</h5><br>
+    {% endif %}
+    <input type="submit" value="Register">
+</form>
+</body>
+</html>

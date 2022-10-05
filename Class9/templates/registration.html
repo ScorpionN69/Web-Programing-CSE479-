@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{url_for('static', filename='styles/style.css') }}">
+</head>
+<body>
+<div id="feedback-form">
+  <h2 class="header">Register Today</h2>
+  <div>
+    <form action="/registration" method="post">
+        Userame<br> <input type="text" name="name" ><br>
+        {% if unameMsg == 0 %}
+            <h5>Username must contain at least 8 character</h5><br>
+        {% endif %}
+        <input type="radio" id="male" name="gender" value="MALE">
+     <label for="male">MALE</label><br>
+     <input type="radio" id="female" name="gender" value="FEMALE">
+        <label for="female">FEMALE</label><br><br>
+
+        <label for="dist">Choose a District</label><br><br>
+
+        <select name="district" id="dist">
+          <option value="DHK">DHK</option>
+          <option value="CTG">CTG</option>
+          <option value="SYL">SYL</option>
+          <option value="DIN">DIN</option>
+        </select><br><br>
+
+        Password<br> <input type="password" name="pass1"><br>
+        Confirm Password<br> <input type="password" name="pass2"><br>
+        {% if passMsg == 1 %}
+            <h5>Password Didn't Match</h5><br>
+        {% endif %}
+        email<br> <input type="email" name="email"><br><br>
+        {% if emailMsg == 1 %}
+            <h5>Input a valid email</h5><br>
+        {% endif %}
+        <button type="submit">Register</button>
+    </form>
+    </div>
+</div>
+</body>
+</html>
